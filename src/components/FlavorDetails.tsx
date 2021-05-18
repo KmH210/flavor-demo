@@ -14,9 +14,12 @@ interface Props {
 }
 
 function FlavorDetails({flavor, onVote}: Props) {
+
   return (
     <div className="FlavorDetails">
-      
+      <h3>Name: {flavor.name}</h3>
+      <p> Votes: {flavor.votes}</p>
+      <button type="submit" onClick={() => onVote(flavor.id || 0)}>Vote</button>
     </div>
   );
 }
